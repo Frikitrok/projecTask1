@@ -1,0 +1,91 @@
+@font-face {
+	font-family: 'HelveticaNeueCyr-Bold';
+	src: url('../fonts/HelveticaNeueCyr-Bold.otf')  format('opentype');
+}
+
+*{
+	font-family: 'HelveticaNeueCyr-Bold';
+}
+
+input:disabled {
+	background: white;
+}
+
+#pokemon-wrapper {
+	width: 300px;
+	position: relative;
+	margin: 0 auto;
+	z-index: 2;
+}
+
+#pokemon {
+	width: calc(100% - 24px);
+	height: calc(80px - 24px);
+	display: block;
+	position: relative;
+	padding: 10px;
+	font-size: 16pt;
+	font-weight: bold;
+	border: 2px solid #80ced6;
+}
+
+#pokemon:focus {
+	outline-style: none;
+}
+
+#pokemon-wrapper ul {
+	width: calc(300px - 4px);
+	border: 2px solid #80ced6;
+	border-top: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	position:;
+	background-color: white;
+}
+
+#pokemon-wrapper ul li {
+	width: calc(100% - 8px);
+	padding: 4px;
+	list-style-type: none;
+	font-size: 11pt;
+}
+
+#pokemon-wrapper ul li:hover {
+	background:  #deeaee;
+	box-shadow: 0px 0px 0px 2px #80ced6;
+}
+
+#loading {
+	width: 300px;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	display: none;
+}
+
+.focus-on {
+	background:  #deeaee;
+	box-shadow: 0px 0px 0px 2px #80ced6;
+}
+
+#focused {
+	background-color: #f7cac9;
+	color: white;
+}
+
+#pokemon-stat-wrapper {
+	width: 300px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	z-index: 1;
+}
+
+table {
+	width: 100%;
+}
+
+table tr th {
+	border: 2px solid black;
+}
