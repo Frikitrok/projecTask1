@@ -34,7 +34,7 @@ function call_response(responseText){
 //event for clicking main input 
 mainInput.addEventListener('click', function(){
 	if(checkRequest < 1) {
-		httpGetAsync('http://www.pokeapi.co/api/v2/pokemon/?limit=900',  call_response);
+		httpGetAsync('https://www.pokeapi.co/api/v2/pokemon/?limit=900',  call_response);
 		checkRequest++;
 	}
 });
@@ -111,10 +111,9 @@ function addElement (resultArr, pokemonInput) {
 		    				resultArr.push(pokemonArray[l].name);
 		    				//console.log(k);
 			    			z++;
-			    			makeLi(pokemonArray[l].name);
 			    			//console.log(pokemonArray[l].name);
-			    			if(z >= 5) {
-			    				break;
+			    			if(z < 10) {
+			    				makeLi(pokemonArray[l].name);
 			    			}
 
 			    		}
@@ -145,11 +144,10 @@ function addElement (resultArr, pokemonInput) {
 				    				resultArr.push(pokemonArray[l].name);
 				    				//console.log(k);
 					    			z++;
-					    			makeLi(pokemonArray[l].name);
+					    			if(z < 10) {
+					    				makeLi(pokemonArray[l].name);
+					    			} 
 					    			//console.log(pokemonArray[l].name);
-					    			if(z >= 5) {
-					    				break; 
-					    			}
 					    		}
 					    	}
 					    	timeInput[k] =  pokemonInput.split('')[k];
@@ -292,7 +290,7 @@ function call_response_pokemon(responseText){
 
 function resetPokeStat(focused) {
 	if(focused != null) {
-		var link = 'http://www.pokeapi.co/api/v2/pokemon/' + focused;
+		var link = 'https://www.pokeapi.co/api/v2/pokemon/' + focused;
 		httpGetAsync(link,  call_response_pokemon);
 	}
 }
